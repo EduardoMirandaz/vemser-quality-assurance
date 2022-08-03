@@ -16,6 +16,7 @@ import static io.restassured.RestAssured.given;
 // alterar;
 
 
+
 public class UserService {
     // definicao da interface de chamadas
     private String baseUrl = "https://petstore.swagger.io/v2/user";
