@@ -1,0 +1,18 @@
+{
+  "id": 13112131,
+  "category": {
+    "id": 4124124,
+    "name": "Hulk"
+  },
+  "name": "Dogaomic",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 123131,
+      "name": "Tag"
+    }
+  ],
+  "status": "available"
+}
