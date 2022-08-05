@@ -7,7 +7,6 @@ import static pages.catalog.WomenCatalogPage.*;
 
 public class CatalogPage extends Browser {
 
-
     public void clickPrimeiroLista() {
         BaseTest.hover(hover);
         BaseTest.click(addToCart);

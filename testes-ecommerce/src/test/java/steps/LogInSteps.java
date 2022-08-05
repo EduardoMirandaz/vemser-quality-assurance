@@ -37,4 +37,13 @@ public class LogInSteps extends Browser {
         loginPage.preencherPassword();
         signIn_loginPage.clicarBtnLogin();
     }
+
+    public void cadastrarDeslogarELogar(){
+        signInSteps.cadastrar();
+        // Clicar no botao de logout e voltar para a SignIn_LoginPage
+        myAccountPage.clicarLogout();
+        logar();
+    }
+
+
 }

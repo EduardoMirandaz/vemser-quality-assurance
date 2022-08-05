@@ -33,7 +33,7 @@ public class BuyDefaultDress extends Browser {
     @Test
     public void buyDefaultDress(){
 
-        cadastrarDeslogarELogar();
+        logInSteps.cadastrarDeslogarELogar();
 
         String nomeDoVestido = "Faded Short Sleeve";
         comprarVestido(nomeDoVestido);
@@ -53,6 +53,16 @@ public class BuyDefaultDress extends Browser {
         finalizarPagamentoDefault();
     }
 
+    public void comprarVestido(){
+        myAccountPage.buscarVestido("Printed");
+        myAccountPage.clickBtnSearch();
+
+        catalog.clickPrimeiroLista();
+        catalog.proceedToCheckout();
+
+        finalizarPagamentoDefault();
+    }
+
     private void finalizarPagamentoDefault() {
         shoppingCartSummaryPage.clicarProsseguirParaPagamento();
 
@@ -64,13 +74,6 @@ public class BuyDefaultDress extends Browser {
         paymentMethodPage.clickPayBankWire();
 
         orderSummaryPage.clickConfirmOrder();
-    }
-
-    public void cadastrarDeslogarELogar(){
-        signInSteps.cadastrar();
-        // Clicar no botao de logout e voltar para a SignIn_LoginPage
-        myAccountPage.clicarLogout();
-        logInSteps.logar();
     }
 
 }
