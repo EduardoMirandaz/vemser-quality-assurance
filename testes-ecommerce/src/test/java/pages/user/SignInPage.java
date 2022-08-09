@@ -124,7 +124,6 @@ public class SignInPage extends BaseTest {
         BaseTest.sendKeys(selectorState, Keys.ENTER);
     }
 
-
     public void criarJsonCadastro(Map<String, String> login) {
         JsonManipulation.criarJsonCadastro(login);
     }

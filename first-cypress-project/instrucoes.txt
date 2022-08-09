@@ -1,0 +1,58 @@
+npm => node package manager -> gerenciador de pacotes
+npx => node package executor -> executar o cypress
+
+
+1 - > Especificar que vamos criar um projeto node.js
+(basta rodar o comando npm init --yes)
+
+2 - > Instalar a dependencia do cypress
+(basta rodar o comando npm install -D cypress)
+
+
+
+3 - > iniciar a estrutura basica do cypress
+(basta rodar npx cypress open e selecionar end2end)
+(clicar em continuar)
+(já no site, criar um epty) -> ok, run the spec
+(trocar o nome que vem antes de spec.cy.js pro nome do projeto a ser testado)
+observar o projeto criado em cypress/e2e/....spec.cy.js
+
+4 - > realizando testes
+
+ exemplo:
+
+context('Todo', () => {
+
+  it('Inserir uma nova tarefa na lista', () => {
+  
+    // site
+    cy.visit('https://example.cypress.io')
+  
+  
+    // seletor
+    cy.get('seletor)
+
+
+    // acoes
+
+    cy.get('seletor).click
+    cy.get('seletor).type('texto')
+    cy.get('seletor).select('')
+
+
+    //validacoes
+
+    cy.get('seletor).should('have.length', 1)
+    cy.get('seletor).should('contain', 'bem-vindo   ')
+    
+
+
+  })
+})
+
+
+// documentação:
+
+https://www.cypress.io/
+
+
