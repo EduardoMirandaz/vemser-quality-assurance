@@ -4,12 +4,16 @@ export default class Util {
      cy.visit(url)
   }
 
-  click(elemet){ 
-     cy.get(elemet).click() 
-  }
+   click(element){ 
+      cy.get(element).click() 
+   }
+   
+   clickWait(element, time){ 
+      cy.get(element).click().wait(time)
+   }
 
-  clickForce(elemet){ 
-     cy.get(elemet).click({force:true}) 
+  clickForce(element){ 
+     cy.get(element).click({force:true}) 
   }
 
   preencherInput(element, text){ 
